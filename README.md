@@ -36,3 +36,10 @@ so try `make TAB TAB` to see what commands are available for each service.
 + `{service}/ssh` is an alias for `docker-compose exec {service} bash`.
 + All other commands of form `{service}/{command}` will execute 
   `docker-compose {command} {service}`
+
+#PROTIP!!1!
+You can change the line
+```COMPOSE := docker-compose -f $(DOCKER_FILE)```
+to something along the lines of
+```COMPOSE := ssh root@yourwebsite.com docker-compose -f $(DOCKER_FILE)```
+to execute all commands on a server via `ssh`.

@@ -1,5 +1,6 @@
 # ComposeMakefile
-A handy Makefile that offers tab completions for [Docker Compose](https://docs.docker.com/compose/)
+A handy Makefile that offers tab completions for 
+[Docker Compose](https://docs.docker.com/compose/)
 
 # Why?
 This began as a utility for my personal website, where I use Docker Compose for 
@@ -11,6 +12,9 @@ without tab completions. Now it's not a problem anymore.
 Simply pull this Makefile and place it next to your `docker-compose.yml` file. 
 If you need to place it in a different directory or have a different name for 
 your Compose file, make sure you edit the `DOCKER_FILE` variable to point to it.
+If you use another Makefile, you can include this Makefile into yours by 
+renaming it to `ComposeMakefile`, and adding this line to your Makefile:
+```include ComposeMakefile```
 
 If it's not already installed, `make` is rather easy to install in most UNIX and 
 UNIX-like environments. You will need it to make this work at all.
